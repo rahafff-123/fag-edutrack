@@ -1,0 +1,110 @@
+:root {
+  /* Backgrounds */
+  --bg-main: #EAF2FF;        /* خلفية الموقع */
+  --bg-secondary: #F5F9FF;  
+  --bg-card: #FFFFFF;        
+
+  /* Primary Blues */
+  --blue-main: #3B82F6;      
+  --blue-dark: #1E40AF;      
+  --blue-light: #93C5FD;     
+  --blue-soft: #DBEAFE;      
+
+  /* Accent / Actions */
+  --green-main: #34D399;     
+  --green-soft: #A7F3D0;     
+
+  /* Text */
+  --text-main: #1F2937;      
+  --text-secondary: #6B7280; 
+  --text-light: #9CA3AF;     
+
+  /* Borders & Shadows */
+  --border-color: #E5ECF9;
+  --shadow-soft: 0 10px 30px rgba(30, 64, 175, 0.12);
+}
+
+/* الصفحة بالكامل */
+body {
+  background-color: var(--bg-main);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* الهيدر: اللوجو والعنوان */
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* خانة اللوجو */
+.logo-placeholder {
+  width: 80px;
+  height: 80px;
+  background-color: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-dark);
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* العنوان + الوصف */
+.title-section h1 {
+  margin: 0;
+  color: var(--text-main);
+}
+
+.title-section p {
+  margin: 5px 0 0 0;
+  color: var(--text-secondary);
+}
+
+/* حاوية الأسئلة */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  max-width: 700px;
+  margin-left: auto; /* للكروت على اليمين */
+  margin-right: 20px;
+}
+
+/* كل كرت سؤال */
+.faq-card {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+/* السؤال */
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blue-dark);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* الجواب */
+.faq-answer {
+  display: none; /* يختفي افتراضياً */
+  padding: 15px;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+/* زر السؤال عند التحويم */
+.faq-question:hover {
+  color: var(--blue-main);
+}
